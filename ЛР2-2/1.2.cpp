@@ -3,11 +3,9 @@
 -  функция удаления элемента
 -  вывод всего списка на экран
 -  выход из программы*/
-#include <iostream>      
-#include <stdio.h>                      
+#include <iostream>                           
 #include <string.h>
 #include <iomanip>
-#include <fstream>
 #include <windows.h>
 #include "1.1.h"
 #define path "dataBase.txt"

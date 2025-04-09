@@ -1,6 +1,4 @@
 #include <iostream>      
-#include <stdio.h>
-#include <fstream>
 #include <windows.h>
 #include "1.1.h"
 using namespace std;
@@ -42,7 +40,7 @@ int menu()
     {
         cin.clear();
         cin.ignore(1000, '\n');
-        cout << "Ошибка ввода: номер действия должен быть положительным целым числом от 1 до 4. Повторный ввод: ";
+        cout << "Ошибка ввода: номер действия должен быть положительным целым числом от 1 до 5. Повторный ввод: ";
         cin >> er;
     }
     return er;
