@@ -1,10 +1,10 @@
-/*Создать однонаправленный список для целых чисел в порядке возрастания.(Использовать пример 12.1)
-Написать следующие функции для работы со списком:
-- countList - подсчет числа элементов;
-- findMax - поиск максимального элемента списка; 
-- findMin - поиск минимального элемента списка; 
-– Удалить все повторения числа
-- Удалить все вхождения числа*/
+/*РЎРѕР·РґР°С‚СЊ РѕРґРЅРѕРЅР°РїСЂР°РІР»РµРЅРЅС‹Р№ СЃРїРёСЃРѕРє РґР»СЏ С†РµР»С‹С… С‡РёСЃРµР» РІ РїРѕСЂСЏРґРєРµ РІРѕР·СЂР°СЃС‚Р°РЅРёСЏ.(РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїСЂРёРјРµСЂ 12.1)
+РќР°РїРёСЃР°С‚СЊ СЃР»РµРґСѓСЋС‰РёРµ С„СѓРЅРєС†РёРё РґР»СЏ СЂР°Р±РѕС‚С‹ СЃРѕ СЃРїРёСЃРєРѕРј:
+- countList - РїРѕРґСЃС‡РµС‚ С‡РёСЃР»Р° СЌР»РµРјРµРЅС‚РѕРІ;
+- findMax - РїРѕРёСЃРє РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° СЃРїРёСЃРєР°; 
+- findMin - РїРѕРёСЃРє РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° СЃРїРёСЃРєР°; 
+вЂ“ РЈРґР°Р»РёС‚СЊ РІСЃРµ РїРѕРІС‚РѕСЂРµРЅРёСЏ С‡РёСЃР»Р°
+- РЈРґР°Р»РёС‚СЊ РІСЃРµ РІС…РѕР¶РґРµРЅРёСЏ С‡РёСЃР»Р°*/
 #include <iostream>      
 #include <stdio.h>
 #include <windows.h>
@@ -20,7 +20,7 @@ struct list
 static list* s = NULL;
 
 
-//ДОБАВЛЕНИЕ ЭЛЕМЕНТА
+//Р”РћР‘РђР’Р›Р•РќРР• Р­Р›Р•РњР•РќРўРђ
 extern void insert(int value)
 {
     list* newP = new list, * previous, * current;
@@ -49,22 +49,22 @@ extern void insert(int value)
             previous->next = newP;
             newP->next = current;
         }
-        cout << "Вставленный элемент " << value << " занял позицию " << position << "." << endl << endl << endl;
+        cout << "Р’СЃС‚Р°РІР»РµРЅРЅС‹Р№ СЌР»РµРјРµРЅС‚ " << value << " Р·Р°РЅСЏР» РїРѕР·РёС†РёСЋ " << position << "." << endl << endl << endl;
     }
     else
-        cout << value << " не вставлен. Недостаточно памяти!" << endl << endl << endl;
+        cout << value << " РЅРµ РІСЃС‚Р°РІР»РµРЅ. РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїР°РјСЏС‚Рё!" << endl << endl << endl;
 }
 
 
-//ПЕЧАТЬ СПИСКА
+//РџР•Р§РђРўР¬ РЎРџРРЎРљРђ
 extern void printList()
 {
     list* current = s;
     if (current == NULL)
-        cout<<"\nСписок пуст!"<< endl << endl << endl;
+        cout<<"\nРЎРїРёСЃРѕРє РїСѓСЃС‚!"<< endl << endl << endl;
     else
     {
-        cout << "\nСПИСОК:" << endl;
+        cout << "\nРЎРџРРЎРћРљ:" << endl;
         while (current != NULL)
         {
             cout << current->value << endl;
@@ -75,14 +75,14 @@ extern void printList()
 }
 
 
-//ПРОВЕРКА НА ПУСТОТУ
+//РџР РћР’Р•Р РљРђ РќРђ РџРЈРЎРўРћРўРЈ
 extern int isEmpty()
 {
     return s == NULL;
 }
 
 
-//ЧИСЛО ЭЛЕМЕНТОВ
+//Р§РРЎР›Рћ Р­Р›Р•РњР•РќРўРћР’
 extern int countList()
 {
     register int count = 0;
@@ -97,7 +97,7 @@ extern int countList()
 }
 
 
-//ПОИСК МАКСИМАЛЬНОГО
+//РџРћРРЎРљ РњРђРљРЎРРњРђР›Р¬РќРћР“Рћ
 extern void findMax()
 {
     list* current = s;
@@ -110,18 +110,18 @@ extern void findMax()
         position++;
     }
 
-    cout << "\nМаксимальный элемент " << current->value << " найден на позиции " << position << "." << endl << endl << endl;
+    cout << "\nРњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚ " << current->value << " РЅР°Р№РґРµРЅ РЅР° РїРѕР·РёС†РёРё " << position << "." << endl << endl << endl;
 }
 
 
-//ПОИСК МИНИМАЛЬНОГО
+//РџРћРРЎРљ РњРРќРРњРђР›Р¬РќРћР“Рћ
 extern void findMin()
 {
-    cout << "\nМинимальный элемент " << s->value << " найден на позиции 1" << "." << endl << endl << endl;
+    cout << "\nРњРёРЅРёРјР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚ " << s->value << " РЅР°Р№РґРµРЅ РЅР° РїРѕР·РёС†РёРё 1" << "." << endl << endl << endl;
 }
 
 
-//УДАЛИТЬ ДУБЛИКАТЫ
+//РЈР”РђР›РРўР¬ Р”РЈР‘Р›РРљРђРўР«
 extern void deleteDuplicates(int value)
 {
     list* current = s, * previous = NULL, * temp;
@@ -151,11 +151,11 @@ extern void deleteDuplicates(int value)
             current = current->next;
         }
     }
-    cout << "Все дубликаты " << value << " успешно удалены!" << endl << endl << endl;
+    cout << "Р’СЃРµ РґСѓР±Р»РёРєР°С‚С‹ " << value << " СѓСЃРїРµС€РЅРѕ СѓРґР°Р»РµРЅС‹!" << endl << endl << endl;
 }
 
 
-//УДАЛИТЬ ВХОЖДЕНИЯ
+//РЈР”РђР›РРўР¬ Р’РҐРћР–Р”Р•РќРРЇ
 extern void deleteAllOccurrences(int value)
 {
     list* current = s, * previous = NULL, * temp;
@@ -178,5 +178,5 @@ extern void deleteAllOccurrences(int value)
             current = current->next;
         }
     }
-    cout << "Все вхождения " << value << " успешно удалены!" << endl << endl << endl;
+    cout << "Р’СЃРµ РІС…РѕР¶РґРµРЅРёСЏ " << value << " СѓСЃРїРµС€РЅРѕ СѓРґР°Р»РµРЅС‹!" << endl << endl << endl;
 }

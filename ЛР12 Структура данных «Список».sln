@@ -1,11 +1,11 @@
-﻿
+п»ї
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ЛР12 Структура данных «Список»", "ЛР12 Структура данных «Список»\ЛР12 Структура данных «Список».vcxproj", "{A603BB9E-62B1-4D59-8D92-B97C9D856551}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Р›Р 12 РЎС‚СЂСѓРєС‚СѓСЂР° РґР°РЅРЅС‹С… В«РЎРїРёСЃРѕРєВ»", "Р›Р 12 РЎС‚СЂСѓРєС‚СѓСЂР° РґР°РЅРЅС‹С… В«РЎРїРёСЃРѕРєВ»\Р›Р 12 РЎС‚СЂСѓРєС‚СѓСЂР° РґР°РЅРЅС‹С… В«РЎРїРёСЃРѕРєВ».vcxproj", "{A603BB9E-62B1-4D59-8D92-B97C9D856551}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ЛР2-2", "ЛР2-2\ЛР2-2.vcxproj", "{44A24E9C-5553-4558-97A4-4D87954B436A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Р›Р 2-2", "Р›Р 2-2\Р›Р 2-2.vcxproj", "{44A24E9C-5553-4558-97A4-4D87954B436A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
